@@ -1,0 +1,7 @@
+prime_numbers_settings:
+  path:  '/prime-numbers'
+  defaults:
+    _controller:  '\Drupal\prime_numbers\Controller\PrimeNumbersController::myCallbackMethod'
+    _title: 'Prime Numbers'
+  requirements:
+    _permission: 'view prime numbers'
