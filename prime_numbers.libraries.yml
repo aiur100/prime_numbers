@@ -2,4 +2,6 @@ prime-numbers:
   version: 1.x
   css:
     theme:
-      css/prime_numbers.css: {}     
+      css/prime_numbers.css: {}
+  js:
+    js/prime_numbers.js: {}         

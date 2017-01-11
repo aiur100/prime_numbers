@@ -15,6 +15,7 @@ class PrimeNumbersController {
     <div class="myDiv">
       <div class="bg"></div>
         <div class="block-title">Prime Numbers Rock!</div>
+        <div class="title">Movable Title</div>
         <ol>
           <li>  2</li>
           <li>  3</li>
@@ -22,10 +23,11 @@ class PrimeNumbersController {
           <li>  7</li>
           <li>  ...Many More!</li>
         </ol>
-        I like Prime Numbers!
+        <label class="prime-label">Enter a Number, and see if it is a Prime Number!</label>
+        <input type="number" id="prime-check" />
     </div>';
     $element = array(
-      '#markup' => '<p><b>Prime Numbers are cool!</b></p>' . $content,
+      '#markup' =>  $content,
       '#attached' => array(
         'library' => array(
           'prime_numbers/prime-numbers',
