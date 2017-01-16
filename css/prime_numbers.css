@@ -1,6 +1,10 @@
 .myDiv {
     position: relative;
     z-index: 1;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 }
 
 .myDiv .bg {
