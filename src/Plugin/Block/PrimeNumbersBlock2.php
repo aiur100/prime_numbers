@@ -16,7 +16,7 @@ use Drupal\Core\Annotation\Translation;
  *
  * @Block(
  *   id = "prime_numbers_block_2",
- *   admin_label = @Translation("Prime Numbers Block2"),
+ *   admin_label = @Translation("Prime Numbers Page"),
  *   module = "prime_numbers"
  * )
  */
@@ -29,20 +29,15 @@ class PrimeNumbersBlock2 extends BlockBase {
     $this->configuration['label'] = t('Prime Numbers Block 2');
     // You wrap your query in the db_query function and put the results in the 
     // $result variable
-    $result = db_query("SELECT * FROM node_field_data");
+    $result = db_query("SELECT * FROM router WHERE name = 'prime_numbers_settings'");
     $content = "";
-    // The result variable is an object with as many rows in it as there were rows 
-    // of data returned from your query, you’re going to loop through these rows
-    // with the foreach statement, put the individual row data into the $row 
-    // variable, add the title from that $row into the $content variable, continue 
-    // the loop, add the next title, and so on until all the titles are listed in the 
-    // $content variable.
-    // Then you assign $block[‘content’] to be equal to $content and tada! Your 
-    // titles from your query end up in the first block on your screen.
+
     foreach($result as $row){
       // the “.=” rather than just “=” means take whatever was already in 
       // the content variable and then concatenate it with what comes after “.=”
-      $content .= $row->title . '</br>';
+      $title    = str_replace("-", " ", $row->path);
+      $title    = str_replace("/", "",  $title);
+      $content .= "<a href=\"/drupal".$row->path."\">$title</a><br>";
     }
     return array(
       '#markup' => $content,
