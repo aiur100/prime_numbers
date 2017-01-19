@@ -1,7 +1,7 @@
 (function($) {
     $(document).ready(function() {
       console.log('hello');
-      $('.title').draggable();
+      //$('.title').draggable();
 
       $('.primelabel').click(function(){
       		var value = prompt("Please enter your prime-number", "7");

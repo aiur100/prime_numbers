@@ -1,4 +1,4 @@
 view prime numbers:
   title: 'View prime numbers'
   description: 'Allow access to view the prime numbers page.'
-  restrict access: TRUE
+  restrict access: FALSE

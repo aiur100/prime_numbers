@@ -26,7 +26,7 @@ class PrimeNumbersBlock2 extends BlockBase {
    * Implements \Drupal\block\BlockBase::blockBuild().
    */
   public function build() {
-    $this->configuration['label'] = t('Prime Numbers Block 2');
+    $this->configuration['label'] = t('Curiosities');
     // You wrap your query in the db_query function and put the results in the 
     // $result variable
     $result = db_query("SELECT * FROM router WHERE name = 'prime_numbers_settings'");
